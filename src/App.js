@@ -1,14 +1,12 @@
 import React, { Component } from 'react'
-import Guest from './Guest'
-import User from './User'
+
 
 export default class App extends Component {
    
     render() {
         return (
             <div>
-               <Guest /> 
-               <User />
+               <h1>My first React App deploy</h1>
             </div>
         )
     }
