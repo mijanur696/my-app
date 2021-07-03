@@ -6,7 +6,7 @@ export default class App extends Component {
     render() {
         return (
             <div>
-               <h1>My first React App deploy</h1>
+               <h1>Md Mijanur Rahaman</h1>
             </div>
         )
     }
