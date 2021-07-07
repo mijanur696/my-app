@@ -24,7 +24,26 @@ body{
 }
 
 input{
-    color: #f1f1f1;
+    padding: 5px 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    
+    
+}
+
+button{
+    padding: 3px 10px;
+    border-radius: 5px;
+    /* background: rgb(165, 154, 154); */
+    background: none;
+    border: 2px solid rgb(172, 122, 122);
+
+}
+
+button:hover{
+    background: #f1f1f1;
+    
 }
 
 
