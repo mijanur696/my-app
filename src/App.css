@@ -21,7 +21,7 @@ body{
     .container{
         background-image: url("background.png");
         background-size: cover;
-        height: 600px;
+        min-height: 700px;
         
         
     }
