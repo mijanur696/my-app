@@ -1,0 +1,33 @@
+body{
+    background-image:url("background.png") ;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}
+
+.container{
+    border: 1px solid red;
+    text-align: center;
+    
+}
+
+@media screen and (max-width:750px) {
+
+    body{
+        color: #f1f1f1; 
+       
+    }
+
+    .container{
+        background-image: url("background.png");
+        background-size: cover;
+        height: 600px;
+        
+        
+    }
+
+    
+}
+
+
+
