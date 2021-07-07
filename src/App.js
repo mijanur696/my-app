@@ -34,8 +34,8 @@ export default class App extends Component {
                 <h2>{Math.floor(this.state.temp)}</h2>
                 <span>{Math.floor(this.state.min_temp)}</span>  <span style={{paddingLeft:"20px"}}>{Math.floor(this.state.max_temp)}</span> 
                 <h3>{this.state.despo}</h3>
-
-            </div>
+                <input type="text"/>
+                </div>
         )
     }
 }
