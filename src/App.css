@@ -23,6 +23,10 @@ body{
     
 }
 
+.inputField{
+    margin-top: 80px;
+}
+
 input{
     padding: 5px 10px;
     border-radius: 5px;
@@ -35,16 +39,9 @@ input{
 button{
     padding: 3px 10px;
     border-radius: 5px;
-    
-    background: none;
-    border: 2px solid rgb(172, 122, 122);
-
 }
 
-button:hover{
-    background: #f1f1f1;
-    
-}
+
 
 
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './App.css'
 import rain from "./rain.png"
+// import City from "./City"
 
 export default class App extends Component {
 
@@ -10,21 +11,27 @@ export default class App extends Component {
       temp:"",
       min_temp:"",
       max_temp:"",
-      despo:""
-   }
+      despo:"",
+      city:"Paris"
     
+      
+   }
+
+ 
  componentDidMount(){
-    //  const city='Paris'
-     fetch("https://api.openweathermap.org/data/2.5/weather?q=kolkata&appid=06035caebd81ed391da0b14e0e025a8e&units=metric")
+     fetch("https://api.openweathermap.org/data/2.5/weather?q="+ this.state.city +"&appid=06035caebd81ed391da0b14e0e025a8e&units=metric")
      .then(response => response.json())
      .then(data=> this.setState({cityName:data.name,
         countryName:data.sys.country,
         temp:data.main.temp,
         min_temp:data.main.temp_min,
         max_temp:data.main.temp_max,
-        despo:data.weather[0].description
+        despo:data.weather[0].description,
+        
     }))
  }
+
+
    
     render() {
         return (
@@ -34,7 +41,10 @@ export default class App extends Component {
                 <h2>{Math.floor(this.state.temp)}</h2>
                 <span>{Math.floor(this.state.min_temp)}</span>  <span style={{paddingLeft:"20px"}}>{Math.floor(this.state.max_temp)}</span> 
                 <h3>{this.state.despo}</h3>
-                <input type="text" placeholder="Enter Your City"/> <button>Enter </button>
+                <div className="inputField">
+                <input type="text" onChange={this.handleChange} placeholder="Enter Your City"/> <button onClick={this.enterCity}>Enter </button>
+                </div>
+                
                 </div>
         )
     }
