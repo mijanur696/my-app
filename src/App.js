@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
 import rain from "./rain.png"
-// import City from "./City"
 
 export default class App extends Component {
 
@@ -14,16 +13,8 @@ export default class App extends Component {
       min_temp:"",
       max_temp:"",
       despo:"",
-      city:function(){
-         var myarr=['Kolkata','Mumbai']
-         for(var i=0;i<myarr.length;i++){
-            console.log(myarr[i])  
-
-            return myarr[i]
-         }
+      city:['Kolkata','Mumbai','Chennai','Bangalore','Hyderabad','Delhi','Lucknow','Ahmedabad','Bhopal','Ranchi','Srinagar','Guwahati','Bhubaneswar','Thiruvananthapuram','Dehradun','Agartala','Imphal','Pondicherry','Gandhinagar','Shimla','Amaravati','Gangtok']
         
-        
-      }
       
           
    }
@@ -33,7 +24,7 @@ export default class App extends Component {
  
  
  componentDidMount(){
-     fetch("https://api.openweathermap.org/data/2.5/weather?q="+ this.state.city() +"&appid=06035caebd81ed391da0b14e0e025a8e&units=metric")
+     fetch("https://api.openweathermap.org/data/2.5/weather?q="+ this.state.city[Math.floor(Math.random()*20)] +"&appid=06035caebd81ed391da0b14e0e025a8e&units=metric")
      .then(response => response.json())
      .then(data=> this.setState({cityName:data.name,
         countryName:data.sys.country,
@@ -57,7 +48,7 @@ export default class App extends Component {
                 {/* <div className="inputField">
                 <input type="text" onChange={function handleChange(e){ this.setState({input:e.target.value}) }} placeholder="Enter Your City"/> <button onClick={this.cityName}>Enter </button>
                 </div> */}
-                
+                <h4>Refresh this page to show the Indian random city weather forecast. </h4>
                 </div>
         )
     }
